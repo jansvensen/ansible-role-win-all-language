@@ -11,5 +11,5 @@
 
 - name: Set-WinUserLanguageList
   win_shell: |
-    Set-WinUserLanguageList -Languagelist '{{ win.user.language }}' -Force
-  when: language_tag.stdout is not match(win.user.language)
+    Set-WinUserLanguageList -Languagelist '{{ win_user_language }}' -Force
+  when: language_tag.stdout is not match(win_user_language)
